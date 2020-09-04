@@ -43,7 +43,7 @@
 //             */
 
 //             // PRIMITIVE TYPES
-            
+
 //             // String
 const name = "Alice";
 console.log(typeof name);
@@ -94,7 +94,7 @@ let val;
 
 // // Number-> String
 val = String(777);
-val = String(7*7);
+val = String(7 * 7);
 
 // // Boolean-> String
 val = String(true);
@@ -103,7 +103,7 @@ val = String(true);
 val = String(new Date());
 
 // // Array-> String
-val = String(['Esther', 'Ruth', 'Abigail', 'Hannah']) 
+val = String(['Esther', 'Ruth', 'Abigail', 'Hannah'])
 
 // // toString() Method
 val = (7).toString();
@@ -128,7 +128,7 @@ val = parseFloat('700.3');
 console.log(val);
 console.log(typeof val);
 console.log(val.length);
-console.log(val.toFixed(2)); 
+console.log(val.toFixed(2));
 
 
 // // TYPE COERCION: Type changes that Javascript will do for us.
@@ -144,16 +144,16 @@ console.clear();
 
 
 // Numbers & The Math Object
-const num1 = 100;
+const numA = 100;
 const num2 = 50;
 let result;
 
 // Simple math with numbers
-result = num1 + num2;
-result = num1 * num2;
-result = num1 - num2;
-result = num1 / num2;
-result = num1 % num2
+result = numA + num2;
+result = numA * num2;
+result = numA - num2;
+result = numA / num2;
+result = numA % num2
 
 // Math Object
 
@@ -177,8 +177,8 @@ result = Math.abs(-7);
 result = Math.pow(8, 2);
 
 // Method for min and max
-result = Math.min(2,7,8);
-result = Math.max(7,3,10);
+result = Math.min(2, 7, 8);
+result = Math.max(7, 3, 10);
 
 // Method for Random
 result = Math.random();
@@ -193,7 +193,7 @@ console.clear();
 // String Methods and Concatenation:
 
 const firstName = 'Martin';
-const lastName ='Richardson';
+const lastName = 'Richardson';
 const ageMR = 44
 const str = 'Peter is a nice name as well'
 
@@ -219,7 +219,7 @@ person = 'That\'s a great idea! Coffee sounds good. Can\'t wait!';
 person = firstName.length;
 
 // Concat
-person = firstName.concat(' ' , lastName);
+person = firstName.concat(' ', lastName);
 
 // Change Letter Case
 person = firstName.toUpperCase();
@@ -240,7 +240,7 @@ person = firstName.charAt('2');
 person = firstName.charAt(firstName.length - 1);
 
 // Use substring() to pull a string out that is within a string....
-person =  firstName.substring(0, 4);
+person = firstName.substring(0, 4);
 
 // slice.... This is most often used to pull things out of arrays but can be used for strings as well. This can give you charaters in a backwards formation as well.
 person = firstName.slice(0, 4);
@@ -251,7 +251,7 @@ person = firstName.slice(-3);
 person = str.split(' ');
 
 // replace()... this will replace individual elements in an array. First in the '' in the () you put what elements needs to be replaced; then in the second put what the new value is.
-person = str.replace('Peter' , 'Keanu');
+person = str.replace('Peter', 'Keanu');
 
 // includes()... Thiss gives a true or false value depending on what is in the string.
 person = str.includes('Peter');
@@ -261,10 +261,211 @@ console.clear();
 
 // Template Literals... Are used to make Javascript code more readable. 
 
-const name1 = 'David';
-const age1 = 33;
-const job = 'King';
-const city = 'Jerusalem';
+const name1 = 'Amanda';
+const age1 = 34;
+const job = 'Preschool Teacher';
+const city = 'Show Low';
+
+let html;
+
+// This can be used for shorthand of functions and if statements: Examples are on lines below and 28, 29. Colon in this instance means "else".
+
+
+
+function hello() {
+
+    return 'Bon Jour';
+
+}
+
+
+
+// Without Template Strings (es5) Way
+
+html = '<ul><li>Name: ' + name + '</li><li>Age: ' + age + '</li><li>' + job + '</li><li>' + city + '</li></ul>';
+
+
+
+// Below is an organized way of doing this.
+
+
+
+html = '<ul>' +
+
+    '<li>Name: ' + name + '</li>' +
+
+    '<li>Age: ' + age + '</li>'
+
+'<li>Job: ' + job + '</li>'
+
+'<li>City: ' + city + '</li>'
+
+'</ul>';
+
+// With Template Strings
+
+html = `
+
+<ul>
+
+    <li>Name: ${name}</li>
+
+    <li>Age: ${age}</li>
+
+    <li>Job: ${job}</li>
+
+    <li>City: ${city}</li>
+
+    <li>${2 + 2}</li>
+
+    <li>${hello()}</li>
+
+    <li>${age > 30 ? 'Over 30' : 'Under 30'}</li>
+
+</ul>`;
+
+
+
+document.body.innerHTML = html;
+
+
+
+
+
+// Arrays and Array Methods:
+
+const num1 = [33, 77, 10, 07, 03];
+
+const num3 = new Array(1, 2, 3, 17, 27);
+
+const fruit = ['Apples', 'Strawberries', 'Pears', 'Mangos'];
+
+const mixed = [37, 'Bon Jour', true, undefined, null, { a: 1, b: 1 }, new Date()];
+
+
+
+let arrLess;
+
+
+
+// Get the array length:
+
+arrLess = num1.length;
+
+
+
+// Check if is array: comes back true or false.
+
+arrLess = Array.isArray(num1);
+
+
+
+// Get a single value in an array:
+
+arrLess = num1[3];
+
+arrLess = num1[0];
+
+
+
+// Insert something in to the array:
+
+num1[2] = 100;
+
+
+
+// Find index of a value:
+
+arrLess = num1.indexOf(07);
+
+
+
+// Mutating Arrays:
+
+// Add on to end:
+
+num1.push(770);
+
+
+
+// Add on to front:
+
+num1.unshift(127);
+
+
+
+// Take off from end:
+
+num1.pop();
+
+
+
+// Take off from front: 
+
+num1.shift();
+
+
+
+// Splice values from anywhere in the array:
+
+num1.splice(1, 1);
+
+
+
+// Reverse the Array:
+
+num1.reverse();
+
+
+
+// Concatinate Arrays:
+
+num1.concat(num3);
+
+
+
+// Sorting Arrays:
+
+arrLess = fruit.sort();
+
+// arrLess = num.sort();
+
+// The above is sorting numbers. When this happens the console log will only put the first digits in counting order. So below is the way to re-adjust to make console log to read and sort the whole number. This is called "Compare Function":
+
+// arrLess.sort(function(x, y){
+
+//     return x - y;
+
+// });
+
+// Reverse sort:
+
+// arrLess.sort(function(x , y){
+
+//     return y - x;
+
+// });
+
+
+
+// Find
+
+function under50(num3) {
+
+    return
+
+}
+
+
+
+
+
+
+console.log(num1);
+
+console.log(arrLess);
+
+console.clear();
 
 
 
@@ -296,8 +497,8 @@ const city = 'Jerusalem';
 
 
 
-  
-            
+
+
 
 
 
