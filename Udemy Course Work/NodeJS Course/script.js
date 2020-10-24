@@ -1,3 +1,0 @@
-// Responses:
-
-/*Understanding Requests: */
