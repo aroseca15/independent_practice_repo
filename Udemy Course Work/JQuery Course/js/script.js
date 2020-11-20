@@ -39,7 +39,7 @@ $(function(){
 
 
 // METHODS FOR FILTERING:
-$(function(){
+$(function(){ 
   // This will filter through the 'even' elements on the html index. Principles apply for the above selectors as well:
 // $('#list').find('li').filter(':even').css('background-color', 'rgba(180, 180, 30, 0.8)');
 
@@ -92,7 +92,7 @@ $(function(){
 
 
 
-// AJAX with JQuery:
+// getJSON with JQuery:
 // What is AJAX?  AJAX is an acronym standing for Asynchronous JavaScript and XML and this technology helps us to load data from the server without a browser page refresh. Ways to do this is by: $.get(),    $.post(), $.ajax(), $.getJSON...
 
 
